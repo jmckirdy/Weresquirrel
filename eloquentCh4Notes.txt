@@ -1,0 +1,23 @@
+let object1 = {value: 10};
+let object2 = object1;
+let object3 = {value: 10};
+
+console.log(object1 == object2);
+// → true
+console.log(object1 == object3);
+// → false
+
+object1.value = 15;
+console.log(object2.value);
+// → 15
+console.log(object3.value);
+// → 10
+
+object2 value mutates as object1s value is changed. it's not the actual object as
+the value its  the object reference.
+
+The object1 and object2 bindings grasp the same object, which is why changing 
+object1 also changes the value of object2. They are said to have the same identity. 
+The binding object3 points to a different object, which initially contains the same 
+properties as object1 but lives a separate life.
+
