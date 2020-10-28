@@ -1,4 +1,4 @@
-let journal = [76, 9, 4, 1, false]
+let journal = ['carrots', 'pizza', 'beer', 'nuts'];
 
 function addEntry(events, squirrel) {
     journal.push({events, squirrel});
@@ -24,7 +24,19 @@ function tableFor(event, journal) {
     return table;
 }
 
-console.log(tableFor(['pizza', journal]));
+function journalEvents(journal) {
+    let events = [];
+    for (let entry of journal) {
+        for (let event of entry.events) {
+            if (!events.includes(event)) {
+                events.push(event);
+            }
+        }
+    }
+    return events;
+}
+
+console.log(journalEvents([journal]));
 
 
 
