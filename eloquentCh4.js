@@ -36,7 +36,11 @@ function journalEvents(journal) {
     return events;
 }
 
-console.log(journalEvents([journal]));
+for (let event of journalEvents(JOURNAL)) {
+    console.log(event + ":", phi(tableFor(event, JOURNAL)));
+}
+
+// console.log(journalEvents([journal]));
 
 
 
