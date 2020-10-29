@@ -1,4 +1,4 @@
-let journal = ['carrots', 'pizza', 'beer', 'nuts'];
+var journal = ['carrots', 'pizza', 'beer', 'nuts'];
 
 function addEntry(events, squirrel) {
     journal.push({events, squirrel});
@@ -36,8 +36,8 @@ function journalEvents(journal) {
     return events;
 }
 
-for (let event of journalEvents(JOURNAL)) {
-    console.log(event + ":", phi(tableFor(event, JOURNAL)));
+for (let event of journalEvents(journal)) {
+    console.log(event + ":", phi(tableFor(event, journal)));
 }
 
 // console.log(journalEvents([journal]));

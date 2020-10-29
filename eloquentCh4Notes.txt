@@ -21,3 +21,22 @@ object1 also changes the value of object2. They are said to have the same identi
 The binding object3 points to a different object, which initially contains the same 
 properties as object1 but lives a separate life.
 
+
+for (let i = 0; i < JOURNAL.length; i++) {
+  let entry = JOURNAL[i];
+  // Do something with entry
+}
+This kind of loop is common in classical JavaScript—going over arrays one element at a 
+time is something that comes up a lot, and to do that you’d run a counter over the length 
+of the array and pick out each element in turn.
+
+There is a simpler way to write such loops in modern JavaScript.
+
+for (let entry of JOURNAL) {
+  console.log(`${entry.events.length} events.`);
+}
+
+The word 'of' after a var definition, loops over the elements of the value given after 'of'. 
+Works for arrays strings and some other data structures.
+
+
